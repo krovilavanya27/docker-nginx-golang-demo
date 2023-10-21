@@ -1,0 +1,29 @@
+map $upstream_http_strict_transport_security $sts_header {
+        default "max-age=31536000; includeSubDomains";
+        "" "max-age=31536000; includeSubDomains";
+    }
+
+    map $upstream_http_x_content_type_options $xcto_header {
+        default "nosniff";
+        "" "nosniff";
+    }
+
+    map $upstream_http_x_xss_protection $xxp_header {
+        default "1; mode=block";
+        "" "1; mode=block";
+    }
+
+    map $upstream_http_x_frame_options $xfo_header {
+        default "DENY";
+        "" "DENY";
+    }
+
+    map $upstream_http_content_security_policy $csp_header {
+        default "frame-ancestors 'none'";
+        "" "frame-ancestors 'none'";
+    }
+
+    map $upstream_http_access_control_allow_credentials $acac_header {
+        default "TRUE";
+        "" "TRUE";
+    }
