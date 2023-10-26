@@ -236,7 +236,3 @@ docker-compose build
 docker-compose up
 
 ```
-
-
-## Recording
-Demo: https://asciinema.org/a/bwrQXmZbzXhNGPYVp0JipYcCu
